@@ -12,19 +12,17 @@ while True:
             ch = int(input("Enter your choice: "))
             if ch == 1:
                 dep = float(input("Enter amount to deposit: "))
-                bal = bal + dep
                 if dep < 0:
                     print("enter a valid amount\n")
-                    bal = bal - dep
                 else:
+                    bal = bal + dep
                     print("thank you for banking with us. your money has been deposited. \ncurrent balance is ", bal)
             elif ch == 2:
                 wit = float(input("Enter the amount to withdraw: "))
-                bal = bal - wit
                 if wit > bal:
-                    bal = bal + wit
                     print("\nINSUFFICIENT FUNDS\ncurrent balance is ", bal)
                 else:
+                    bal = bal - wit
                     print("amount withdrawn successfully.\ncurrent balance is ", bal)
             elif ch == 3:
                 print("\nyour current balance is ", bal, "\n")
